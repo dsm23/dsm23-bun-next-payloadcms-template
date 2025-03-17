@@ -55,7 +55,7 @@ git clone -n --depth=1 --filter=tree:0 https://github.com/payloadcms/payload my-
 
 1. First [clone the repo](#clone) if you have not done so already
 1. `cd my-project && cp .env.example .env` to copy the example environment variables
-1. `pnpm install && pnpm dev` to install dependencies and start the dev server
+1. `bun install && bun run dev` to install dependencies and start the dev server
 1. open `http://localhost:3000` to open the app in your browser
 
 That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen instructions to login and create your first admin user. Then check out [Production](#production) once you're ready to build and serve your app, and [Deployment](#deployment) when you're ready to go live.
@@ -213,15 +213,15 @@ If your database is pointed to production you will want to set `push: false` oth
 Locally create a migration
 
 ```bash
-pnpm payload migrate:create
+bunx payload migrate:create
 ```
 
 This creates the migration files you will need to push alongside with your new configuration.
 
-On the server after building and before running `pnpm start` you will want to run your migrations
+On the server after building and before running `bun start` you will want to run your migrations
 
 ```bash
-pnpm payload migrate
+bunx payload migrate
 ```
 
 This command will check for any migrations that have not yet been run and try to run them and it will keep a record of migrations that have been run in the database.
@@ -252,8 +252,8 @@ The seed script will also create a demo user for demonstration purposes only:
 
 To run Payload in production, you need to build and start the Admin panel. To do so, follow these steps:
 
-1. Invoke the `next build` script by running `pnpm build` or `npm run build` in your project root. This creates a `.next` directory with a production-ready admin bundle.
-1. Finally run `pnpm start` or `npm run start` to run Node in production and serve Payload from the `.build` directory.
+1. Invoke the `next build` script by running `bun build` or `npm run build` in your project root. This creates a `.next` directory with a production-ready admin bundle.
+1. Finally run `bun start` or `npm run start` to run Node in production and serve Payload from the `.build` directory.
 1. When you're ready to go live, see Deployment below for more details.
 
 ### Deploying to Payload Cloud
@@ -265,7 +265,7 @@ The easiest way to deploy your project is to use [Payload Cloud](https://payload
 This template can also be deployed to Vercel for free. You can get started by choosing the Vercel DB adapter during the setup of the template or by manually installing and configuring it:
 
 ```bash
-pnpm add @payloadcms/db-vercel-postgres
+bun add @payloadcms/db-vercel-postgres
 ```
 
 ```ts
@@ -285,7 +285,7 @@ export default buildConfig({
 We also support Vercel's blob storage:
 
 ```bash
-pnpm add @payloadcms/storage-vercel-blob
+bun add @payloadcms/storage-vercel-blob
 ```
 
 ```ts

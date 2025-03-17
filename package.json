@@ -1,5 +1,5 @@
 {
-  "name": "dsm23-next-payloadcms-template",
+  "name": "dsm23-bun-next-payloadcms-template",
   "version": "1.0.0",
   "description": "Website template for Payload",
   "license": "MIT",
@@ -9,10 +9,10 @@
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.cjs",
     "dev": "next dev",
-    "dev:prod": "rm -rf .next && pnpm build && pnpm start",
+    "dev:prod": "rm -rf .next && bun run build && bun run start",
     "generate:importmap": "payload generate:importmap",
     "generate:types": "payload generate:types",
-    "ii": "pnpm --ignore-workspace install",
+    "ii": "bun --ignore-workspace install",
     "fmt": "prettier . --write --cache --cache-strategy=content --cache-location=.prettiercache",
     "fmt.check": "prettier . --check --cache --cache-strategy=content --cache-location=.prettiercache",
     "lint:css": "stylelint \"**/*.css\" --max-warnings 0 --allow-empty-input --cache --cache-strategy=content --cache-location=.stylelintcache",
@@ -20,7 +20,7 @@
     "lint": "run-p lint:js lint:css",
     "lint:fix": "next lint --fix",
     "payload": "payload",
-    "reinstall": "rm -rf node_modules && rm pnpm-lock.yaml && pnpm --ignore-workspace install",
+    "reinstall": "rm -rf node_modules && rm bun.lock && bun --ignore-workspace install",
     "start": "next start",
     "test": "jest"
   },
@@ -97,14 +97,5 @@
     "stylelint-selector-bem-pattern": "4.0.1",
     "tailwindcss": "4.0.14",
     "typescript": "5.8.2"
-  },
-  "packageManager": "pnpm@10.6.4+sha512.da3d715bfd22a9a105e6e8088cfc7826699332ded60c423b14ec613a185f1602206702ff0fe4c438cb15c979081ce4cb02568e364b15174503a63c7a8e2a5f6c",
-  "engines": {
-    "node": "18.20.2 || >=20.9.0"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp"
-    ]
   }
 }

@@ -36,6 +36,11 @@
         "mcr.microsoft.com/playwright"
       ],
       "matchUpdateTypes": ["digest", "patch", "minor", "major"]
+    },
+    {
+      "groupName": "bun monorepo",
+      "matchPackageNames": ["bun", "@types/bun", "oven/bun"],
+      "matchUpdateTypes": ["digest", "patch", "minor", "major"]
     }
   ],
   "rebaseWhen": "conflicted",
