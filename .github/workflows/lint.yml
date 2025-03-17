@@ -26,32 +26,25 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
-        with:
-          run_install: false
-
       - uses: actions/cache@d4323d4df104b026a6aa633fdb11d772146be0bf # v4.2.2
         with:
-          # See here for caching with `yarn` https://github.com/actions/cache/blob/main/examples.md#node---yarn or you can leverage caching with actions/setup-node https://github.com/actions/setup-node
+          # See here for caching with `bun` https://github.com/actions/cache/blob/main/examples.md#bun
           path: .next/cache
           # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
+            ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-
 
-      - name: Set up Node.js
-        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4.3.0
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@4bc047ad259df6fc24a6c9b0f9a0cb08cf17fbe5 # v2.0.1
         with:
-          # We want to ensure that the Node.js version running here respects our supported versions
-          node-version-file: ".nvmrc"
-          cache: "pnpm"
+          bun-version-file: ".bun-version"
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: bun install --frozen-lockfile
 
       - name: Lint check
-        run: pnpm lint
+        run: bun run lint
         env:
           FORCE_COLOR: 1
