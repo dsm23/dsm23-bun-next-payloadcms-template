@@ -6,11 +6,14 @@ import { Search } from "~/search/Component";
 import type { CardPostData } from "~/components/Card";
 import PageClient from "./page.client";
 
+export const dynamic = "force-dynamic";
+
 type Args = {
   searchParams: Promise<{
     q: string;
   }>;
 };
+
 export default async function Page({
   searchParams: searchParamsPromise,
 }: Args) {
