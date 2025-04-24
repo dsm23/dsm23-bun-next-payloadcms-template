@@ -34,13 +34,18 @@
         "playwright",
         "@playwright/test",
         "mcr.microsoft.com/playwright"
-      ],
-      "matchUpdateTypes": ["digest", "patch", "minor", "major"]
+      ]
     },
     {
       "groupName": "bun monorepo",
-      "matchPackageNames": ["bun", "@types/bun", "oven/bun"],
-      "matchUpdateTypes": ["digest", "patch", "minor", "major"]
+      "matchPackageNames": ["bun", "@types/bun", "oven/bun"]
+    },
+    {
+      "groupName": "minio images",
+      "matchDatasources": ["docker"],
+      "matchManagers": ["docker-compose"],
+      "matchPackageNames": ["minio/minio", "minio/mc"],
+      "versioning": "regex:^RELEASE\\.(?<major>\\d{4})-(?<minor>\\d{2})-(?<patch>\\d{2})T\\d{2}-\\d{2}-\\d{2}Z$"
     }
   ],
   "rebaseWhen": "conflicted",
