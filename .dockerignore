@@ -1,0 +1,14 @@
+*
+!.husky/
+!public/
+!src/
+!bun.lock
+!index.html
+!next-env.d.ts
+!next-sitemap.config.cjs
+!next.config.ts
+!package.json
+!postcss.config.js
+!redirects.js
+!tailwind.config.mjs
+!tsconfig.json
