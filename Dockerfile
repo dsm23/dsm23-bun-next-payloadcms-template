@@ -9,10 +9,7 @@ FROM oven/bun:1.2.15-alpine@sha256:37b37b8cefbf88956d4cbecbc5b3ac4b3f1a9fb051f74
 FROM base AS deps
 WORKDIR /app
 
-ENV HUSKY=0
-
-# for the sake of the prepare script
-COPY .husky/ ./.husky/
+ENV LEFTHOOK=0
 
 # Install dependencies based on the preferred package manager
 COPY package.json bun.lock ./
