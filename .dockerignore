@@ -9,5 +9,5 @@
 !package.json
 !postcss.config.js
 !redirects.js
-!tailwind.config.mjs
+!tailwind.config.ts
 !tsconfig.json
