@@ -3,7 +3,7 @@
 # To use this Dockerfile, you have to set `output: 'standalone'` in your next.config.js file.
 # From https://github.com/vercel/next.js/blob/canary/examples/with-docker/Dockerfile
 
-FROM oven/bun:1.2.18-alpine@sha256:a7df687a2f684ee2f7404e2592039e192d75d26a04f843e60d9fc342741187d0 AS base
+FROM oven/bun:1.2.19-alpine@sha256:7dc0e33a62cbc1606d14b07706c3a00ae66e8e9d0e81b83241ed609763e66d55 AS base
 
 # Install dependencies only when needed
 FROM base AS deps
