@@ -31,6 +31,11 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Install unzip
+        run: |
+          apt-get update
+          apt-get install unzip
+
       - name: Bun setup
         uses: ./.github/actions/setup
 
