@@ -84,7 +84,7 @@
         "prettier-plugin-tailwindcss": "0.6.14",
         "storybook": "9.1.10",
         "stylelint": "16.25.0",
-        "stylelint-config-standard": "39.0.0",
+        "stylelint-config-standard": "39.0.1",
         "stylelint-order": "7.0.0",
         "stylelint-selector-bem-pattern": "4.0.1",
         "tailwindcss": "4.1.14",
@@ -2626,7 +2626,7 @@
 
     "stylelint-config-recommended": ["stylelint-config-recommended@17.0.0", "", { "peerDependencies": { "stylelint": "^16.23.0" } }, "sha512-WaMSdEiPfZTSFVoYmJbxorJfA610O0tlYuU2aEwY33UQhSPgFbClrVJYWvy3jGJx+XW37O+LyNLiZOEXhKhJmA=="],
 
-    "stylelint-config-standard": ["stylelint-config-standard@39.0.0", "", { "dependencies": { "stylelint-config-recommended": "^17.0.0" }, "peerDependencies": { "stylelint": "^16.23.0" } }, "sha512-JabShWORb8Bmc1A47ZyJstran60P3yUdI1zWMpGYPeFiC6xzHXJMkpKAd8EjIhq3HPUplIWWMDJ/xu0AiPd+kA=="],
+    "stylelint-config-standard": ["stylelint-config-standard@39.0.1", "", { "dependencies": { "stylelint-config-recommended": "^17.0.0" }, "peerDependencies": { "stylelint": "^16.23.0" } }, "sha512-b7Fja59EYHRNOTa3aXiuWnhUWXFU2Nfg6h61bLfAb5GS5fX3LMUD0U5t4S8N/4tpHQg3Acs2UVPR9jy2l1g/3A=="],
 
     "stylelint-order": ["stylelint-order@7.0.0", "", { "dependencies": { "postcss": "^8.5.3", "postcss-sorting": "^9.1.0" }, "peerDependencies": { "stylelint": "^16.18.0" } }, "sha512-rSWxx0KscYfxU02wEskKXES9lkRzuuONMMNkZ7SUc6uiF3tDKm7e+sE0Ax/SBlG4TUf1sp1R6f3/SlsPGmzthg=="],
 
