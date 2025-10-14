@@ -33,7 +33,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Unit & Integration tests
-        run: bun run test --coverage --show-seed
+        run: bun run test run --coverage --project unit
         env:
           FORCE_COLOR: 1
           NEXT_PUBLIC_SERVER_URL: ${{ vars.NEXT_PUBLIC_SERVER_URL }}
