@@ -1,3 +1,4 @@
+import type { HTMLAttributes } from "react";
 import {
   RichText as ConvertRichText,
   LinkJSXConverter,
@@ -61,10 +62,13 @@ const jsxConverters: JSXConvertersFunction<NodeTypes> = ({
 });
 
 type Props = {
-  data: DefaultTypedEditorState;
+  // TODO: remove the any when lexical types and payload types are aligned
+  // https://payloadcms.com/docs/rich-text/overview#typescript
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: DefaultTypedEditorState | any;
   enableGutter?: boolean;
   enableProse?: boolean;
-} & React.HTMLAttributes<HTMLDivElement>;
+} & HTMLAttributes<HTMLDivElement>;
 
 export default function RichText(props: Props) {
   const { className, enableProse = true, enableGutter = true, ...rest } = props;
