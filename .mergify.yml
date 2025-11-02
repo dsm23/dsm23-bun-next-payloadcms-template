@@ -40,6 +40,9 @@ pull_request_rules:
       - check-success=smoke-test
       - check-success=unit-testing
       - check-success=zizmor
+      - or:
+          - check-success=renovate/stability-days
+          - check-pending!=renovate/stability-days
     actions:
       review:
         type: APPROVE
@@ -63,6 +66,9 @@ pull_request_rules:
       - check-success=unit-testing
       - check-success=zizmor
       - "#approved-reviews-by>=1"
+      - or:
+          - check-success=renovate/stability-days
+          - check-pending!=renovate/stability-days
     actions:
       merge:
         method: merge
