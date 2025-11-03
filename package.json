@@ -94,7 +94,7 @@
     "eslint": "9.38.0",
     "eslint-config-next": "15.5.6",
     "eslint-plugin-storybook": "9.1.16",
-    "jsdom": "27.0.1",
+    "jsdom": "27.1.0",
     "lefthook": "2.0.2",
     "nextjs-bundle-analysis": "0.5.0",
     "npm-run-all2": "8.0.4",
