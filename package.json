@@ -84,7 +84,7 @@
     "@types/escape-html": "1.0.4",
     "@types/node": "24.10.1",
     "@types/nodemailer": "7.0.3",
-    "@types/react": "19.2.3",
+    "@types/react": "19.2.4",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "5.1.1",
     "@vitest/browser": "4.0.8",
