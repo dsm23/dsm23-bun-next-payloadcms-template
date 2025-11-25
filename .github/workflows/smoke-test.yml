@@ -19,7 +19,8 @@ jobs:
   smoke-test:
     runs-on: ubuntu-24.04
     container:
-      image: mcr.microsoft.com/playwright:v1.56.1@sha256:f1e7e01021efd65dd1a2c56064be399f3e4de00fd021ac561325f2bfbb2b837a
+      image: gwennlbh/playwright-bun:v1.56.1@sha256:0da27bd4abb31b59ee27a1ca7bb24ebe22bb8a2d9b391a9535c328bdef799d39
+      options: --user 1001
     steps:
       - name: Harden Runner
         uses: step-security/harden-runner@95d9a5deda9de15063e7595e9719c11c38c90ae2 # v2.13.2
@@ -30,11 +31,6 @@ jobs:
         uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
         with:
           persist-credentials: false
-
-      - name: Install unzip
-        run: |
-          apt-get update
-          apt-get install unzip
 
       - name: Bun setup
         uses: ./.github/actions/setup
