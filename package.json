@@ -5,9 +5,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "next build --turbopack",
+    "build": "bun --bun next build --turbopack",
     "postbuild": "next-sitemap --config next-sitemap.config.cjs",
-    "dev": "next dev --turbopack",
+    "dev": "bun --bun next dev --turbopack",
     "dev:prod": "rm -rf .next && bun run build && bun run start",
     "generate:importmap": "payload generate:importmap",
     "generate:types": "payload generate:types",
@@ -20,7 +20,7 @@
     "lint:fix": "next lint --fix",
     "payload": "payload",
     "reinstall": "rm -rf node_modules && rm bun.lock && bun --ignore-workspace install",
-    "start": "next start",
+    "start": "bun --bun next start",
     "test": "vitest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
