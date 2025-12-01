@@ -4,7 +4,6 @@ pull_request_rules:
     conditions:
       - author=dsm23
       - check-success=amd64
-      - check-success=analyze-bundle
       - check-success=build
       - check-success=codeql (actions)
       - check-success=codeql (javascript)
@@ -26,7 +25,6 @@ pull_request_rules:
     conditions:
       - author=renovate[bot]
       - check-success=amd64
-      - check-success=analyze-bundle
       - check-success=build
       - check-success=codeql (actions)
       - check-success=codeql (javascript)
@@ -51,7 +49,6 @@ pull_request_rules:
   - name: Automatically merge when GitHub Actions jobs succeed
     conditions:
       - check-success=amd64
-      - check-success=analyze-bundle
       - check-success=build
       - check-success=codeql (actions)
       - check-success=codeql (javascript)
