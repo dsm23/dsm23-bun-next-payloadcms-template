@@ -75,7 +75,7 @@
         "nextjs-bundle-analysis": "0.5.0",
         "npm-run-all2": "8.0.4",
         "postcss": "8.5.6",
-        "prettier": "3.6.2",
+        "prettier": "3.7.1",
         "prettier-plugin-css-order": "2.1.2",
         "prettier-plugin-tailwindcss": "0.7.1",
         "storybook": "10.1.0",
@@ -2121,7 +2121,7 @@
 
     "prelude-ls": ["prelude-ls@1.2.1", "", {}, "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="],
 
-    "prettier": ["prettier@3.6.2", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ=="],
+    "prettier": ["prettier@3.7.1", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-RWKXE4qB3u5Z6yz7omJkjWwmTfLdcbv44jUVHC5NpfXwFGzvpQM798FGv/6WNK879tc+Cn0AAyherCl1KjbyZQ=="],
 
     "prettier-plugin-css-order": ["prettier-plugin-css-order@2.1.2", "", { "dependencies": { "css-declaration-sorter": "^7.1.1", "postcss-less": "^6.0.0", "postcss-scss": "^4.0.9" }, "peerDependencies": { "prettier": "3.x" } }, "sha512-vomxPjHI6pOMYcBuouSJHxxQClJXaUpU9rsV9IAO2wrSTZILRRlrxAAR8t9UF6wtczLkLfNRFUwM+ZbGXOONUA=="],
 
