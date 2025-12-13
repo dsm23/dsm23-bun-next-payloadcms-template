@@ -85,8 +85,8 @@
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "5.1.2",
-    "@vitest/browser-playwright": "4.0.8",
-    "@vitest/coverage-v8": "4.0.8",
+    "@vitest/browser-playwright": "4.0.15",
+    "@vitest/coverage-v8": "4.0.15",
     "copyfiles": "2.4.1",
     "eslint": "9.39.1",
     "eslint-config-next": "16.0.8",
@@ -109,7 +109,7 @@
     "typed-query-selector": "2.12.0",
     "typescript": "5.9.3",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "4.0.8"
+    "vitest": "4.0.15"
   },
   "overrides": {
     "@types/react": "19.2.7",
