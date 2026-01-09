@@ -7,7 +7,7 @@
   "scripts": {
     "build": "bun --bun next build --webpack",
     "postbuild": "next-sitemap --config next-sitemap.config.cjs",
-    "dev": "bun --bun next dev",
+    "dev": "bun --bun next dev --webpack",
     "dev:prod": "rm -rf .next && bun run build && bun run start",
     "generate:importmap": "payload generate:importmap",
     "generate:types": "payload generate:types",
