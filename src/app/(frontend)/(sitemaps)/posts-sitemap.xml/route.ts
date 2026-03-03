@@ -1,6 +1,6 @@
-import { getServerSideSitemap } from "next-sitemap";
 import { unstable_cache } from "next/cache";
 import { getPayload } from "payload";
+import { getServerSideSitemap } from "next-sitemap";
 import config from "@payload-config";
 
 const getPostsSitemap = unstable_cache(
